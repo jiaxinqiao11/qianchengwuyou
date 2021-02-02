@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <!-- 忽略将页面中的数字识别为电话号码 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- 忽略Android平台对邮箱地址的识别 -->
+    <meta name="format-detection" content="email=no">
+    <title>携程旅行-酒店预订,机票预订查询,旅游度假,商旅管理-携程无线官网</title>
+    <meta name="keyword" content="酒店预订,特价酒店,机票,机票预订,飞机票查询,航班查询,酒店团购,旅游度假,旅行,商旅管理,手机订酒店,手机订机票,携程旅行">
+    <meta name="description"
+        content="携程旅行网是中国领先的在线旅行服务公司，旗下携程旅行向超过9000万会员提供酒店预订、酒店点评及特价酒店查询、机票预订、飞机票查询、时刻表、票价查询、航班查询、度假预订、商旅管理、为您的出行提供全方位旅行服务。">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 顶部开始 -->
+    <header>
+        <div>
+            <input type="text" placeholder="超值星期三">
+        </div>
+    </header>
+    <!-- 顶部结束 -->
+    <!-- banner部分开始 -->
+    <nav>
+        <ul>
+            <li>首页</li>
+            <li>本地游</li>
+            <li>温泉</li>
+            <li>亲子时光</li>
+            <li>周边</li>
+            <li>滑雪</li>
+            <li>海岛</li>
+            <li>网红打卡</li>
+            <li>古镇</li>
+            <li>国家公园</li>
+            <li>建筑</li>
+        </ul>
+    </nav>
+    <!-- banner部分结束 -->
+    <!-- 景点开始 -->
+    <aside>
+    </aside>
+    <li id="template">
+        <img src="">
+        <p></p>
+    </li>
+    <!-- 景点结束 -->
+    <!-- 酒店开始 -->
+    <main>
+        <div>
+            <img src="./img/one.jpg">
+            <img src="./img/two.jpg">
+        </div>
+        <article>
+            <figure>
+                <img src="./img/1.jpg">
+                <figcaption>
+                    <h2>去城市中央深海隧道看精——上海海洋水族馆</h2>
+                    <p>174人已收藏</p>
+                    <span>
+                        <img src="./img/author1.jpg">
+                        <p>
+
+                        </p>
+                    </span>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="./img/5.jpg">
+                <figcaption>
+                    <h2>去西安旅游一定不要做的10件事</h2>
+                    <p>143人已收藏</p>
+                    <span>
+                        <img src="./img/author5.jpg">
+                        <p>
+
+                        </p>
+                    </span>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="./img/3.jpg">
+                <figcaption>
+                    <h2>天下第一奇石，广东丹霞山阳奇石，女生看...</h2>
+                    <p>1504人已收藏</p>
+                    <span>
+                        <img src="./img/author3.jpg">
+                        <p>
+
+                        </p>
+                    </span>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="./img/4.jpg">
+                <figcaption>
+                    <h2>呼伦贝尔欢迎您</h2>
+                    <p>1055人对这篇有兴趣</p>
+                    <span>
+                        <img src="./img/author4.jpg">
+                        <p>
+
+                        </p>
+                    </span>
+                </figcaption>
+            </figure>
+        </article>
+    </main>
+    <!-- 酒店结束 -->
+    <!-- 底部开始 -->
+    <footer>
+        <li>
+            <a href="#">
+                <img src="./img/shouye.jpg">
+                <p>首页</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./img/shequ.jpg">
+                <p>社区</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./img/xiaoxi.jpg">
+                <p>消息</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./img/xingcheng.jpg">
+                <p>行程</p>
+            </a>
+        </li>
+        <li>
+            <a href="http://127.0.0.1/my.html">
+                <img src="./img/wode.jpg">
+                <p>我的</p>
+            </a>
+        </li>
+    </footer>
+    <!-- 底部结束 -->
+
+    <script>
+        $.ajax({
+            url: "http://127.0.0.1:8080/infoTrip",
+            success(data) {
+                console.log(data);
+                data.forEach(Item => {
+                    console.log(Item);
+                    let newItem = $("#template").clone(true).attr("id", "");
+                    newItem.appendTo($("aside"))
+                    newItem.find($("img")).attr("src", Item.pic);
+                    newItem.find($("p")).html(Item.desc);
+
+                });
+            }
+        })
+    </script>
+</body>
+
+</html>
