@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="keyword" content="酒店预订,特价酒店,机票,机票预订,飞机票查询,航班查询,酒店团购,旅游度假,旅行,商旅管理,手机订酒店,手机订机票,携程旅行">
+    <meta name="description"
+        content="携程旅行网是中国领先的在线旅行服务公司，旗下携程旅行向超过9000万会员提供酒店预订、酒店点评及特价酒店查询、机票预订、飞机票查询、时刻表、票价查询、航班查询、度假预订、商旅管理、为您的出行提供全方位旅行服务。">
+    <link rel="stylesheet" href="">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/meishi.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <!-- 头部开始 -->
+    <header>
+        <input type="text" value="春节惠玩">
+    </header>
+    <!-- 头部结束 -->
+    <!-- 导航开始 -->
+    <nav>
+        <ul>
+            <li>
+                精选
+                <p>当地玩法</p>
+            </li>
+            <li>
+                附近
+                <p>搜索周边</p>
+            </li>
+            <li>
+                景点
+                <p>尽情游览</p>
+            </li>
+            <li>
+                美食
+                <p>地道风味</p>
+            </li>
+            <li>
+                一日游
+                <p>省心畅玩</p>
+            </li>
+        </ul>
+    </nav>
+    <!-- 导航结束 -->
+    <!-- 主要内容开始 -->
+    <div id="app">
+        <main>
+            <li v-for="food in foods">
+                <img v-bind:src="food.img" />
+                <div>{{food.desc}}</div>
+                <p>{{food.shuoming}}</p>
+            </li>
+        </main>
+    </div>
+    <!-- 内容结束 -->
+    <!-- 底部开始 -->
+    <footer>
+        <li>
+            <a href="#">
+                <img src="./img/shouye.jpg">
+                <p>首页</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./img/shequ.jpg">
+                <p>社区</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./img/xiaoxi.jpg">
+                <p>消息</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="./img/xingcheng.jpg">
+                <p>行程</p>
+            </a>
+        </li>
+        <li>
+            <a href="http://127.0.0.1/携程旅行/my.html">
+                <img src="./img/wode.jpg">
+                <p>我的</p>
+            </a>
+        </li>
+    </footer>
+    <!-- 底部结束 -->
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data: {
+                foods: [
+                    {
+                        "img": "./img/mianpi.jpg",
+                        "desc": "令氏家外家周秦食府",
+                        "shuoming": "西北菜",
+                    },
+                    {
+                        "img": "./img/tangbao.jpg",
+                        "desc": "小六汤包（桥南店）",
+                        "shuoming": "主食",
+                    },
+                    {
+                        "img": "./img/guokui.jpg",
+                        "desc": "刘记锅盔牙子",
+                        "shuoming": "小吃",
+                    },
+                    {
+                        "img": "./img/qianxian.jpg",
+                        "desc": "一诺爸爸乾县豆腐脑（高新中学店）",
+                        "shuoming": "小吃",
+                    },
+                    {
+                        "img": "./img/huitongmian.jpg",
+                        "desc": "汇通面的传说（思源路店）",
+                        "shuoming": "小吃",
+                    },
+                    {
+                        "img": "./img/roujiamo.jpg",
+                        "desc": "老潼关肉夹馍（永绥商业街店）",
+                        "shuoming": "小吃",
+                    },
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>
