@@ -1,0 +1,232 @@
+html,body {
+    /* 让占满整个页面 */
+   width: 100%;
+   height: 100%;
+}
+html{
+   font-size: 26.67vw;
+}
+body {
+    /* 让当前盒子 形成弹性盒，所有的子元素默认在x轴排列 */
+   display: flex;   
+    /* 控制主轴方向是y轴 */
+   flex-direction: column;
+   /* 两端对齐，其余空间自动分配 */
+   justify-content: space-between;
+}
+header {
+   width: 100%;
+   height: 0.56rem;
+   background-color: #EE3010;
+   padding: 0.12rem 0.18rem;
+   box-sizing: border-box;
+   background: url(../img/banner.jpg) no-repeat center center;
+   background-size:7.68rem 4.59rem;
+   // position: fixed;
+   div {   
+      height: 0.32rem;
+      width: 3.37rem;
+      display: flex;
+      input {
+         height: 0.32rem;
+         width: 3.37rem;
+         background-color: #fff;
+         border-radius: 0.1rem;
+         outline: none;
+         border:0;    
+         background-image:url(../img/search.jpg),url(../img/dingwei.jpg);
+         background-repeat: no-repeat,no-repeat;   
+         background-position: 0.05rem 0.06rem, 3.06rem 0.06rem;
+         background-size: 0.17rem 0.2rem,0.19rem 0.19rem;
+      }
+   }    
+}
+header div input::-webkit-input-placeholder {
+   font-size: 0.14rem;
+   text-indent: 0.37rem;  
+   color: #000;
+}
+nav {
+   // position: fixed;
+   width: 100%;
+   height: 0.32rem;
+   background-color: green;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: nowrap;
+   ul {
+      background-color: rgb(233, 21, 21);
+      //不折行
+      white-space: nowrap;
+      //如果内容超出，浏览器会出现滚动条
+      overflow-x: auto;
+      //y轴超出隐藏
+      overflow-y: hidden;
+      width: 100%;
+      height: 0.32rem; 
+      // 默认主轴为x轴，侧轴就是y轴
+      display: flex;  
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      li {
+         font-size: 0.15rem;
+         float: left;
+         padding: 0.12rem 0.1rem ;
+      } 
+   }
+  
+}
+aside {
+   margin-top: 0.12rem;
+   border-radius: 0.1rem;
+   height: 1.67rem;
+   width: 3.37rem;
+   align-self: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   li {
+      width: 0.66rem;
+      height: 0.55rem;
+      text-align: center;
+      img {
+         width: 0.25rem;
+         height: 0.22rem;
+         margin: 0.05rem auto 0;
+      }
+      p {
+         margin-top: 0.05rem;
+         font-size: 0.1rem;
+      }
+   }
+}
+aside li:nth-child(1) {
+   background-color: #FB5C56;
+   border-top-left-radius: 0.1rem;
+}
+aside li:nth-child(2) {
+   background-color: #3E87F8;
+}
+aside li:nth-child(3) {
+   background-color: #5E84FF;   
+}
+aside li:nth-child(4) {
+   background-color: #35C6B7;
+}
+aside li:nth-child(5) {
+   background-color: #FF8D3C;
+   border-top-right-radius: 0.1rem;
+}
+aside li:nth-child(6),aside li:nth-child(11) {
+   background-color: #FFF5F3;
+}
+aside li:nth-child(7),aside li:nth-child(12) {
+   background-color: #EFF8FF;
+}
+aside li:nth-child(8),aside li:nth-child(13) {
+   background-color: #F2F4FF;
+}
+aside li:nth-child(9),aside li:nth-child(14) {
+   background-color: #ECFBF8;
+}
+aside li:nth-child(10),aside li:nth-child(15) {
+   background-color: #FFF9F1;
+}
+aside li:nth-child(11) {
+   border-bottom-left-radius: 0.1rem;
+}
+aside li:nth-child(15) {
+   border-bottom-right-radius: 0.1rem;
+}
+#template {
+   display: none;
+}
+main {
+   width: 3.37rem;
+   flex: 1;
+   overflow: auto;
+   display: flex;
+   //控制单个元素的对齐方式，加在子元素上
+   align-self: center;
+   margin-top: 0.27rem;
+   flex-direction: column;
+   background-color: #F8F8F8;  
+   div {
+      width: 3.37rem;
+      display: flex;
+      //默认主轴为x轴子元素在横线上排列
+      justify-content: space-between;
+      margin-bottom: 0.08rem;
+      img{
+         width: 1.65rem;
+         height: 1.38rem;
+      }
+   }
+}
+main article figure img {
+   width: 1.65rem;
+   height: 2.26rem;
+}
+main article {
+   flex-wrap: wrap;
+   width: 3.37rem;
+   display: flex;
+   justify-content: space-between;
+   figure {
+      margin-bottom: 0.08rem;
+   }
+}
+article figcaption {
+   width: 1.65rem;
+   height: 1.06rem;
+   background-color: #FFFFFF;
+   box-sizing: border-box;
+   padding: 0.12rem 0.16rem 0 0.08rem;
+   h2 {
+      font-size: 0.13rem;
+   }
+   p {
+      font-size: 0.1rem;
+      color: #6B6B6B;
+      margin-top: 0.08rem;
+   }
+   span {
+      display: flex;
+      justify-content: space-between;
+      display: block;
+      margin-top: 0.11rem;
+      img {
+         width: 0.25rem;
+         height: 0.25rem;
+      }
+   }
+}
+footer {
+   padding: 0 0.1rem;
+   width: 100%;
+   height: 0.5rem;
+   background-color:#FFFFFF;  
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 0.22rem; 
+   box-sizing: border-box; 
+   li {
+      text-align: center;
+      img {
+         width: 0.27rem;
+         height: 0.23rem;
+         margin-top: 0.02rem;
+      }
+      p {
+         font-size: 0.1rem;
+         color: #6A6A6A;
+      }
+   }
+}
+footer li:hover p,footer li:focus p {
+   color: #A92519;
+}

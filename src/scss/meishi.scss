@@ -1,0 +1,140 @@
+html,body {
+    width: 100%;
+    height: 100%;
+}
+html{
+    font-size: 26.67vw;
+}
+body {
+    /* 让当前盒子 形成弹性盒，所有的子元素默认在x轴排列 */
+   display: flex;   
+    /* 控制主轴方向是y轴 */
+   flex-direction: column;
+   /* 两端对齐，其余空间自动分配 */
+   justify-content: space-between;
+}
+header {
+    height: 0.48rem;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    padding: 0.11rem 0.17rem 0;
+    box-sizing: border-box;
+    input {
+        outline: none;
+        border: 0;
+        width: 3.37rem;
+        height: 0.32rem;
+        border-radius: 0.13rem;
+        background: rgba(255, 255, 255, .5);
+        font-size: 0.15rem;
+        color: #FFDDD7;
+        text-indent: 0.38rem;
+        background-image:url(../img/search.jpg),url(../img/dingwei.jpg);
+        background-repeat: no-repeat,no-repeat;   
+        background-position: 0.05rem 0.06rem, 3.06rem 0.06rem;
+        background-size: 0.17rem 0.2rem,0.19rem 0.19rem;
+    }
+}
+nav {
+    height: 0.62rem;
+    width: 100%;
+    background-color: #FFFFFF;
+    ul {
+        height: 0.62rem;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.17rem;
+        box-sizing: border-box;
+        li {
+            width: 0.8rem;
+            height: 0.33rem;
+            text-align: center;
+            font-size: 0.15rem;
+            color: #686868;
+            border-right: 0.005rem solid #E8E8E8;
+            p {
+                width: 0.52rem;
+                height: 0.17rem;
+                border-radius: 0.08rem;
+                text-align: center;
+                line-height: 0.17rem;
+                font-size: 0.11rem;
+                color: #9D9D9D;
+                margin-bottom: 0.12rem;
+                margin-left: 0.1rem;
+            }
+        }
+    }
+}
+nav ul li:hover,nav ul li:focus {
+    color: #1187F1;
+}
+nav ul li:hover p,nav ul li:focus p {
+    background-color: #0770E3;
+}
+main {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    background-color: #F8F8F8;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 0.12rem;
+    box-sizing: border-box;
+    li {   
+            width: 1.64rem;
+            height: 2.68rem;     
+            background-color: #FFFFFF;
+            margin-top: 0.1rem;
+            border-bottom-left-radius: 0.06rem;
+            border-bottom-right-radius: 0.06rem;
+            img {
+                width: 1.64rem;
+                height: 1.72rem;
+            }
+            div {
+                font-size: 0.14rem;
+                margin-top: 0.2rem;
+                padding-left: 0.09rem;
+            }
+            p {
+                width: 0.45rem;
+                height: 0.18rem;
+                line-height: 0.18rem;
+                text-align: center;
+                font-size: 0.09rem;
+                margin-left: 0.09rem;
+                margin-top: 0.1rem;
+                background-color: #ECF5FC;
+                color: #1982DD;
+            }
+        }
+    }
+footer {
+    padding: 0 0.1rem;
+    width: 100%;
+    height: 0.5rem;
+    background-color:#FFFFFF;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.22rem; 
+    box-sizing: border-box; 
+    li {
+       text-align: center;
+       img {
+          width: 0.27rem;
+          height: 0.23rem;
+          margin-top: 0.02rem;
+       }
+       p {
+          font-size: 0.1rem;
+          color: #6A6A6A;
+       }
+    }
+ }
+ footer li:hover p,footer li:focus p {
+    color: #A92519;
+ }

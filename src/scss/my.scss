@@ -1,0 +1,191 @@
+html,body {
+    width: 100%;
+    height: 100%;
+}
+html{
+    font-size: 26.67vw;
+ }
+ body {
+    /* 让当前盒子 形成弹性盒，所有的子元素默认在x轴排列 */
+   display: flex;   
+    /* 控制主轴方向是y轴 */
+   flex-direction: column;
+   /* 两端对齐，其余空间自动分配 */
+   justify-content: space-between;
+   background-color: #ECECEC;
+}
+header {
+    width: 100%;
+    height: 1.53rem;
+    background-color: #4566D7;
+    display: flex;
+    flex-direction: column;
+    div {
+       width: 100%;
+       height: 0.4rem;
+       p {
+         //  display: inline-block;
+          height: 0.4rem;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          box-sizing: border-box;
+          padding: 0.2rem 0.17rem 0;
+          span {
+            font-size: 0.2rem;
+            color: #fff;
+         } 
+       }
+    }
+      article {
+         width: 100%;
+         height: 0.52rem;
+         // background-color: green;
+         font-size: 0.19rem;
+         text-align: center;
+         line-height: 0.52rem;
+         color: #F5FFFF;
+      }
+      nav {
+         height: 0.6rem;
+         width: 100%;
+         padding: 0 0.49rem;
+         box-sizing: border-box;
+         display: flex;
+         justify-content: space-between;
+         input {
+            text-align: center;
+            line-height: 0.36rem;
+            height: 0.36rem;
+            width: 1.2rem;
+            border-radius: 0.15rem;
+            outline: none;
+            border: 0;
+            color: #fff;
+            font-size: 0.14rem;
+         }
+      }
+}
+header nav input:nth-child(1) {
+   background-color: #FF9A14;
+}
+header nav input:nth-child(2) {
+   background-color: rgba(255, 255, 255, .4);
+}
+header div span:nth-child(2) {
+   margin-left: 2.52rem;
+}
+aside {
+    width: 100%;
+    height: 1.34rem;
+    div {
+       width: 100%;
+       height: 0.76rem;
+       display: flex;
+       background-color: #FFFFFF;
+       justify-content: space-between;
+       padding-top: 0.15rem;
+       padding-left: 0.16rem;
+       box-sizing: border-box;
+       padding-right: 1.77rem;   
+       img {
+          width: 0.28rem;
+          height: 0.28rem;
+       }
+       span {
+          font-size: 0.14rem;
+       }
+    }
+    nav {
+       width: 100%;
+       height: 0.57rem;
+       background-color: #fff;
+       margin-top: 0.01rem;
+       display: flex;
+       justify-content: space-between;
+       div {
+         width: 1.8rem;
+         height: 0.57rem;
+         display: flex;
+         justify-content: space-between;
+         font-size: 0.15rem;
+         img {
+            width: 0.25rem;
+            height: 0.2rem;
+         }
+       }
+       article {
+          width: 1.8rem;
+          height: 0.57rem;
+          margin-left: 0.01rem;
+          padding-top: 0.18rem;
+          padding-left: 0.18rem;
+          box-sizing: border-box;
+          img {
+             width: 0.25rem;
+             height: 0.22rem;
+          }
+       }
+    }
+}
+aside span p:nth-child(1) {
+   color: #373E46;
+}
+aside span p:nth-child(2) {
+   color: #C2C9D1;
+   margin-top: 0.15rem;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 0.07rem;
+    li {
+       width: 100%;
+       height: 0.76rem;
+       font-size: 0.13rem;
+       padding-left: 0.15rem;
+       box-sizing: border-box;
+       line-height: 0.76rem;
+       display: flex;
+       justify-content: space-between;
+       padding-right: 0.1rem;
+       border-bottom: 1px solid #E8E8E8;
+       background-color: #fff;
+    }
+}
+main li span:nth-child(1) {
+   margin-left: 1.28rem;
+}
+main li:last-child {
+   margin-top: 0.08rem;
+}
+footer {
+    background-color: #FFFFFF;
+    padding: 0 0.1rem;
+    width: 100%;
+    height: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.22rem; 
+    box-sizing: border-box; 
+    li {
+       text-align: center;
+       img {
+          width: 0.27rem;
+          height: 0.23rem;
+          margin-top: 0.02rem;
+       }
+       p {
+          font-size: 0.1rem;
+          color: #6A6A6A;
+       }
+    }
+ }
+ footer li:hover p,footer li:focus p {
+    color: #A92519;
+ }
